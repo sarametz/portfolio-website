@@ -1,0 +1,5 @@
+# ignore bootstrap and font awesome files
+bootstrap/*
+font-awesome/*
+# ignore image files
+images/*
