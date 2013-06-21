@@ -1,3 +1,7 @@
+// map.js
+// Javascript file for smetz.co.nz to embed a map of New Zealand with a marker on Auckland
+// Uses google maps apiS
+// Author: Sara Metz
 var map;
 
 function initialise(){
