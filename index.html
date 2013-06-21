@@ -14,8 +14,28 @@
     <link href='style.css' rel='stylesheet' type='text/css'>
 
     <style type="text/css">
-      .jumbotron{
-        text-align: center;
+      /*hr{
+        margin-right:20px; 
+        border-style: solid none none;
+        border-top: 1px solid #cecece;
+      }*/
+      .intro{
+        font-weight: normal;
+      }
+
+      .intro-cont{
+        border-bottom: 1px solid #cecece;
+        margin-top: 50px;
+        padding-bottom: 40px;
+      }
+      .img-polaroid{
+        margin:20px;
+        box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+        -moz-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+        -webkit-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
+      }
+      .featuredProjs{
+        margin-top: -20px;
       }
     </style>
 
@@ -34,7 +54,7 @@
       ga('create', 'UA-41900270-1', 'smetz.co.nz');
       ga('send', 'pageview');
     </script>
-    
+
 </head>
 
 <body>
@@ -58,10 +78,24 @@
       </div>
 
       <!-- Begin page content -->
-      <div class="container">
-         <div class="jumbotron">
-          <h1>Hello</h1>
-          <p class="lead">Welcome to my website. I am a software engineering student at the University of Auckland.<br>The site is in development at the moment so please bear with me as I get it up and running.</p>
+      <div class="container intro-cont">
+          <h3 class="intro">Hi, I'm <b>Sara</b>, I'm a software engineering student at the University of Auckland and an aspiring software developer. Have a look around and if you like what you see, <a href="./contact.html"><i>contact me</i></a>.</h3>
+      </div>
+      <div class="container featuredProjs">
+        <h2>Featured Projects</h2>
+        <div class="row" >
+          <div class="span4" >
+            <img src="./images/about-screenshot.png" class="img-polaroid" href="./resume.html" id="img1" rel="popover" data-content="I developed this website using HTML and CSS (with the help of bootstrap and font awesome icons) to provide myself with a place to showcase my talents and also to further my experience with HTML and CSS." data-original-title="This Profile Website" data-trigger="hover">
+          </div>
+          
+          <div class="span4">
+            <img src="./images/comingsoon.png" class="img-polaroid" href="./resume.html" id="img2" rel="popover" data-content="I made ...." data-original-title="Coming Soon" data-trigger="hover">
+            
+          </div>
+          
+          <div class="span4">
+            <img src="./images/comingsoon.png" class="img-polaroid" href="./resume.html" id="img3" rel="popover" data-content="I made ...." data-original-title="Coming Soon" data-trigger="hover">
+          </div>
         </div>
       </div>
 
@@ -76,7 +110,13 @@
 
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
-
+  <script>
+    $(function (){ 
+      $("#img1").popover();
+      $("#img2").popover();
+      $("#img3").popover();
+    });
+  </script>
 </body>
 
 </html>
