@@ -33,6 +33,16 @@
       .featuredProjs{
         margin-top: -20px;
       }
+
+      #img1, #img2, #img3 {
+        width:  100%;
+        height: 100%;
+      }
+
+      #img1:hover, #img2:hover, #img3:hover {
+        width:  110%;
+        height: 110%;
+      }
     </style>
 
     <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
@@ -81,16 +91,31 @@
         <h2>Featured Projects</h2>
         <div class="row" >
           <div class="span4" >
-            <img src="./images/about-screenshot.png" class="img-polaroid" href="./portfolio.html" id="img1" rel="popover" data-content="I developed this website using HTML and CSS (with the help of bootstrap and font awesome icons) to provide myself with a place to showcase my talents and also to further my experience with HTML and CSS." data-original-title="My Profile Website (You're on it now)" data-trigger="hover">
+            <a href="./portfolio.html">
+              <img src="./images/about-screenshot.png" class="img-polaroid" id="img1" rel="popover" 
+                data-original-title="My Profile Website (You're on it now)" 
+                data-content="I developed this website using HTML and CSS (with the help of bootstrap and font awesome icons) to provide myself with a place to showcase my talents and also to further my experience with HTML and CSS." 
+                data-trigger="hover">
+            </a>
           </div>
           
           <div class="span4">
-            <img src="./images/comingsoon.png" class="img-polaroid" href="#" id="img2" rel="popover" data-content="I will put a new project here when I finish one that I consider worthy." data-original-title="Coming Soon" data-trigger="hover">
+            <a href="./portfolio.html">
+              <img src="./images/comingsoon.png" class="img-polaroid" id="img2" rel="popover" 
+                data-original-title="Coming Soon" 
+                data-content="I will put a new project here when I finish one that I consider worthy." 
+                data-trigger="hover">
+            </a>
             
           </div>
           
           <div class="span4">
-            <img src="./images/comingsoon.png" class="img-polaroid" href="#" id="img3" rel="popover" data-content="I will put a new project here when I finish one that I consider worthy." data-original-title="Coming Soon" data-trigger="hover">
+            <a href="./portfolio.html">
+              <img src="./images/comingsoon.png" class="img-polaroid" href="#" id="img3" rel="popover" 
+                data-original-title="Coming Soon"
+                data-content="I will put a new project here when I finish one that I consider worthy."  
+                data-trigger="hover">
+            </a>
           </div>
         </div>
       </div>
