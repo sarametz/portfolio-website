@@ -7,143 +7,164 @@
  -->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <title>Sara Metz - Home</title>  
+  <title>Sara Metz</title>  
   <meta name="author" content="Sara Metz">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
   
-  
-  <!-- Bootstrap -->
-    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- javascript -->
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+
+  <!-- CSS -->
+    <link href="./bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
     <link href='style.css' rel='stylesheet' type='text/css'>
-
-    <style type="text/css">
-      
-      .intro{
-        font-weight: normal;
-        padding-top: 30px;
-      }
-
-      .intro-cont{
-        border-bottom: 1px solid #cecece;
-        padding-top: 50px;
-        padding-bottom: 40px;
-      }
-      .img-polaroid{
-        margin:20px;
-        box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
-        -moz-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
-        -webkit-box-shadow: 1px 2px 6px rgba(0,0,0, 0.5);
-      }
-      .featuredProjs{
-        margin-top: -20px;
-      }
-
-      #img1, #img2, #img3 {
-        width:  100%;
-        height: 100%;
-      }
-
-      #img1:hover, #img2:hover, #img3:hover {
-        width:  110%;
-        height: 110%;
-      }
-      #wrap{margin: 0 auto -100px;}
-    </style>
-
-    <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     
     <!-- Favicon location -->
     <link rel="shortcut icon" href="images/favicon.ico">
-    
-    <!-- Google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-41900270-1', 'smetz.co.nz');
-      ga('send', 'pageview');
-    </script>
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="sm-nav">
   
-  <div id="wrap">
+  <div id="wrap" class="row">
 
-      <!-- Fixed navbar -->
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <ul class="nav pull-right">
-              <li class="active"><a href="./index.html">Home</a></li>
-              <li><a href="./about.html">About Me</a></li>
-              <li><a href="./portfolio.html">Portfolio</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
-    
-            <a class="brand" href="./index.html">Sara Metz</a>
-          </div>
-        </div>
+    <div id="static-nav">
+      <div id="home" class="container-fluid col-sm-10">
+          <h3 id="intro">
+            Hi, I'm <b>Sara</b>, I'm a software engineering student at the University of Auckland 
+            and an aspiring software developer. Have a look around and if you like what you see, 
+            <a href="./contact.html"><i>contact me</i></a>.
+          </h3>
       </div>
 
-      <!-- Begin page content -->
-      <div class="container intro-cont">
-          <h3 class="intro">Hi, I'm <b>Sara</b>, I'm a software engineering student at the University of Auckland and an aspiring software developer. Have a look around and if you like what you see, <a href="./contact.html"><i>contact me</i></a>.</h3>
+      <!-- Navigation -->
+      <div id="sidebar" class="col-sm-2">
+        <div id="nav-container">
+          <h1 id="brand">Sara Metz</h1>
+          <ul class="nav nav-stacked" id="sm-nav">
+            <li class="active"><a href="#" class="home-link" data-id="home"><h5>HOME</h5></a></li>
+            <li><a href="#" class="scroll-link" data-id="portfolio"><h5>PORTFOLIO</h5></a></li>
+            <li><a href="#" class="scroll-link" data-id="about"><h5>ABOUT ME</h5></a></li>
+            <li><a href="#" class="scroll-link" data-id="contact"><h5>CONTACT</h5></a></li>
+          </ul>
+        </div>  
       </div>
-      <div class="container featuredProjs">
-        <h2>Featured Projects</h2>
-        <div class="row" >
-          <div class="span4" >
-            <a href="./portfolio.html">
-              <img src="./images/about-screenshot.png" class="img-polaroid" id="img1" rel="popover" 
-                data-original-title="My Profile Website (You're on it now)" 
-                data-content="I developed this website using HTML and CSS (with the help of bootstrap and font awesome icons) to provide myself with a place to showcase my talents and also to further my experience with HTML and CSS." 
-                data-trigger="hover">
-            </a>
-          </div>
-          
-          <div class="span4">
-            <a href="./portfolio.html">
-              <img src="./images/comingsoon.png" class="img-polaroid" id="img2" rel="popover" 
-                data-original-title="Coming Soon" 
-                data-content="I will put a new project here when I finish one that I consider worthy." 
-                data-trigger="hover">
-            </a>
-            
-          </div>
-          
-          <div class="span4">
-            <a href="./portfolio.html">
-              <img src="./images/comingsoon.png" class="img-polaroid" href="#" id="img3" rel="popover" 
-                data-original-title="Coming Soon"
-                data-content="I will put a new project here when I finish one that I consider worthy."  
-                data-trigger="hover">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div id="push"></div>
-  </div>
-  <div id="footer">
-    <div class="container">
-      <p class="p-foot">&copy; 2013 Sara Metz. All rights reserved.</p>
-      <p>Made with <a href="http://twitter.github.io/bootstrap/">Bootstrap</a> and <a href="http://fontawesome.io">Font Awesome icons</a>.</p>
     </div>
-  </div>
 
-  <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Begin page content -->
+    <div id="content-wrapper">
+      <div id="content" class="col-sm-10 col-sm-offset-2">
+        <div class="container">
+          <div id="portfolio" class="page-section">
+            <h3>Featured Projects</h3>
+            <div class="row">
+              <div class="row project-row">
+                  <div class="col-sm-6 img-holder">
+                    <img src="file:///E:/My%20Documents/GitHub/portfolio-website/images/website-image.png" id="img-web" class="project-img"/>
+                  </div>
+                  <div class="col-sm-6 project-desc">
+                    <h4>This Website</h4>
+                    <p> 
+                        I developed this website using HTML and CSS to further my experience in web development.
+                    </p>
+                    <h5>Technologies Used:</h5>
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                    </ul>
+                    <h5>Website:</h5>
+                    <a href="http://smetz.co.nz/">http://smetz.co.nz/</a>
+                    <br><br>
+                    <a href="./webproject.html" class="project-info-link"><button type="button" class="project-btn">More Info</button></a>
+                  </div>
+                  <div class="clearfix hidden-xs"></div>
+              </div>
+              
+            </div>
+          </div> <!-- /portfolio -->
+          <br>
+          <div id="about" class="page-section">
+            <h3>About me</h3>
+            <div class="row">
+              <div id="about-text" class="col-sm-6">
+                  <p>
+                    Hi, I'm Sara Metz, a software developer based in Auckland, New Zealand. I am currently in my fourth and final year of study towards a Bachelor of Engineering specialising in Software Engineering.
+                  </p>
+
+                  <p> I'm interested in mobile application programming, computer graphics, computer
+                      vision and anything new I can learn about programming and computers.
+                  </p>
+                  
+                  <p> 
+                    If you are interested in working with me or just want to say hello <a href="#" class="scroll-link" data-id="contact">contact me</a>.
+                  </p>
+                </div>
+              </div>
+               <div id="skills-text" class="row">
+                  <div id="hr-first">Beginner</div>
+                  <div id="hr-second">Proficient</div>
+                  <div id="hr-third">Expert</div>
+
+                  <h4>Skills</h4>
+                  <h4 id="java" class="skill-bar">{ Java };</h4>          
+                  <h4 id="python" class="skill-bar">python</h4>           
+                  <h4 id="obj-c" class="skill-bar">[Objective-C];</h4>            
+                  <h4 id="html" class="skill-bar">&lt; html /&gt;</h4>         
+                  <h4 id="javascript" class="skill-bar">{JavaScript};</h4>   
+                  <h4 id="css" class="skill-bar">.{ CSS }</h4>   
+                  <h4 id="cpp" class="skill-bar">{ C++ };</h4>            
+                  <h4 id="c-sh" class="skill-bar">{ C# };</h4>  
+                  
+                </div>
+          </div> <!-- /about -->
+          <br>
+          <div id="contact" class="page-section">
+            <h3>Contact me</h3>
+              <div class="well well-large well-transparent clearfix">
+                <i class="icon-envelope icon-3x pull-left"></i>
+                <b>Email</b><br> If you would like to contact me via email for any reason, you can email me at sara@smetz.co.nz and I will try to respond as soon as possible.
+              </div>
+              <div class="well well-large well-transparent clearfix">
+                <i class="icon-linkedin icon-3x pull-left"></i>
+                <b>LinkedIn</b><br> I have a LinkedIn account for professional networking and business inquiries, you can view my profile <a href="http://nz.linkedin.com/pub/sara-metz/74/b37/43b/">here</a>.
+              </div>
+              <div class="well well-large well-transparent clearfix">
+                <i class="icon-github icon-3x pull-left"></i>
+                <b>GitHub</b><br> I also have GitHub for some of my personal projects. <a href="https://github.com/sarametz">Have a look</a>.
+              </div>
+          </div> <!-- /contact -->
+
+        </div> <!-- /container -->
+
+      <div id="footer">
+          <div class="container-fluid">
+            <p class="p-foot">&copy; 2014 Sara Metz.</p>
+          </div>
+      </div> <!-- /footer -->
+
+
+      </div> <!-- /content -->
+
+
+    </div> <!-- /content wrapper -->
+  </div>  <!-- /wrap -->
+  
+
+
+  <!-- Google analytics -->
   <script>
-    $(function (){ 
-      $("#img1").popover();
-      $("#img2").popover();
-      $("#img3").popover();
-    });
+    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    // ga('create', 'UA-41900270-1', 'smetz.co.nz');
+    // ga('send', 'pageview');
   </script>
 </body>
 

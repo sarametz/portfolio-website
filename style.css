@@ -6,60 +6,199 @@
 
 html, body {
   height: 100%;
-}
- 
-body {
-  background:url("./images/billie_holiday.png");
+  font-size: 15px;
 }
 
-.brand{
+h1, h2, h3{
   font-family: 'Philosopher', sans-serif; 
 }
 
-.jumbotron {
-  margin-top: 60px;
-  margin-bottom: 60px;
+h5 {
+  font-size: 16px;
 }
 
-.jumbotron h1 {
-  font-size: 64px;
-  line-height: 1;
+h4, h5, p {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
-/* The following css is from the bootstrap example of a sticky footer at*/
-/* http://twitter.github.io/bootstrap/examples/sticky-footer-navbar.html*/
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto !important;
+#brand {
+  width:100%;
+  padding: 0.2em 0em;
+  margin-top: 0px;
+  font-family: 'Philosopher', sans-serif; 
+  text-align: center;
+}
+
+#sidebar {
+  border-right: 1px solid #eaeaea;
+}
+
+#static-nav {
+  z-index: 100;
+}
+
+#nav-container {
+  position:absolute;
+  top: 50%;
+  width: 100%;
+  left:0px;  
+  margin-top: -83px;
+}
+
+#sm-nav {
+  width:100%;
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color:#000;
+}
+
+#sm-nav .active {
+  color:#fbb829;
+}
+
+.nav > li > a:focus, .nav > li > a:hover  {
+    background:#f8f8f8;
+}
+
+.nav a, .nav a:hover { 
+  color:inherit;
+}
+
+#intro {
+  position: absolute;
+  top:50%;
+  margin: 0px 25%;
+  text-align: center;
+}
+
+#home {
+  background: #fbb829;
+}
+
+.project-row{
+  background: #fff;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.project-row img {
+  width:100%;
+  z-index: 1;
+  border: 1px solid #eaeaea;
+}
+
+.project-row .col-sm-6:first-child {
+  padding-left:0px;
+}
+.project-row .col-sm-6:last-child {
+  padding-right:0px;
+}
+
+.project-desc { 
+  padding-top:15px;
+}
+
+.project-btn{
+  border: 1px solid #000;
+  color:#000;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  background: #fff;
+  padding: 5px 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+.project-info-link:hover {
+  text-decoration: none;
+}
+
+#footer {
+  background: #000;
+  color: #fff;
+}
+
+#about {
+  position:relative;
+}
+
+#hr-first, #hr-second, #hr-third {
+  position: absolute; 
   height: 100%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -100px;
+  border-left: 1px solid #d1d1d1;
+  z-index: 1;
+  color: #d1d1d1;
+  padding-left: 10px;
 }
 
-/* Set the fixed height of the footer here */
-#push,
-#footer {
-  height: 100px;
-}
-#footer {
-  background-color: rgba(105,105,105,0.3);
+#skills-text {
+  position: relative;
 }
 
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-  #footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
+#hr-first { margin-left: 15%;}
+#hr-second { margin-left: 30%;}
+#hr-third { margin-left: 45%;}
+
+.skill-bar{
+  position: relative;
+  background-color: #fbb829;
+  z-index: 5;
+}
+
+#java { width: 44%; }
+#python { width: 42%; }
+#obj-c { width: 40%; }
+#html { width: 37%; }
+#javascript { width: 37%; }
+#css { width: 35%; }
+#cpp { width: 19%; }
+#c-sh { width: 17%; }
+
+@media(min-width: 768px) {
+  #static-nav{
+    position:fixed;
+    top:0%;
+    left:0%;
+    height:100%;
+    width:100%;
   }
+
+  #sidebar {
+    position:absolute;
+    top:0%;
+    right:0%;
+    height:100%;
+  }
+
+  #home {
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+  }
+
+  #content-wrapper{
+    position:fixed;
+    left:100%;
+    top:0%;
+    height:100%;
+    width:100%;
+  }
+
+  #content{
+    position: relative;
+    height:100%;
+    overflow-y: scroll;
+    padding:0 0px;
+  }
+
 }
 
-#wrap > .container {
-  padding-top: 60px;
-}
-.container .p-foot {
-  margin: 20px 0;
-}
+
+
+
+
+
+
+
+
 
