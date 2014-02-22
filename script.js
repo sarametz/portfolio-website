@@ -21,9 +21,13 @@ $(window).load(function() {
 	$("#portfolio, #about, #contact").css("height", $(window).height() );
 	$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
 	$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
+	$("#about-content").css("margin-top", - $("#about-content").height()/2 );
 	console.log($("#project-carousel").height());
 	$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
 	$("#project-carousel").addClass("hidden");
+
+
+
 
 	// navigation click actions	
 	$('.scroll-link').on('click', function(event){
@@ -91,8 +95,10 @@ $(window).load(function() {
 $(window).resize(function() {
 	$("#portfolio, #about, #contact").css("min-height", $(window).height() );
 	$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
+	$("#about-content").css("margin-top", - $("#about-content").height()/2 );
 	if($("#content-wrapper").css("left") == "0px"){
 		$("#static-nav").css({"left": $("#sidebar").outerWidth() - $("#static-nav").outerWidth() });			
 	}
+	$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 
 });
