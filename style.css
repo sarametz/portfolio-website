@@ -29,6 +29,10 @@ h4, h5, p {
   text-align: center;
 }
 
+#brand h5{
+  font-family: 'Philosopher', sans-serif; 
+}
+
 #sidebar {
   border-right: 1px solid #eaeaea;
 }
@@ -75,41 +79,106 @@ h4, h5, p {
   background: #fbb829;
 }
 
-.project-row{
-  background: #fff;
-  margin-left: 15px;
-  margin-right: 15px;
+#portfolio{
+  position: relative;
 }
 
-.project-row img {
+#project-grid{
+  position: absolute;
+  top: 50%;
+}
+
+#project-carousel{
+  position: absolute;
+  top: 50%;
+}
+
+#portfolio .project-cell {
+  background: #dededc;
+  margin: 30px;
+  overflow: hidden;
+  position:relative;
+}
+
+#portfolio .col-sm-4 { 
+  padding:0px;
+}
+
+.project-thumb {
+  max-width:100%;
+  max-height:100%;
+}
+
+#portfolio .project-cell .project-title{
+  background: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,1);
+  text-align: center;
+  padding: 15px;
+  overflow: hidden;
   width:100%;
-  z-index: 1;
-  border: 1px solid #eaeaea;
+  position: absolute;
+  bottom: -100%;
+  display: table;
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 
-.project-row .col-sm-6:first-child {
-  padding-left:0px;
-}
-.project-row .col-sm-6:last-child {
-  padding-right:0px;
+.project-title h5{
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.project-desc { 
-  padding-top:15px;
+#portfolio .project-cell:hover .project-title, #portfolio .project-cell:focus .project-title {
+  background: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,1);
+  bottom:0px;
 }
 
 .project-btn{
   border: 1px solid #000;
   color:#000;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   background: #fff;
   padding: 5px 15px;
   margin: 0 auto;
-  display: block;
 }
 
-.project-info-link:hover {
-  text-decoration: none;
+#carousel-controls{
+  padding-top: 20px;
+  margin: 0 auto;
+  width:100%;
+  position: relative;
+}
+
+#carousel-left-btn{
+  position: absolute;
+  right: 50%;
+  right: calc(50% + 10px);
+}
+
+#carousel-right-btn{
+  position: absolute;
+  left:50%;
+  left: calc(50% + 10px);
+}
+
+#all-proj-btn{
+  position: absolute;
+  bottom: 100%;
+  right: 10px;
+}
+
+.carousel-indicators{
+  bottom: -10px;
+}
+
+.carousel-indicators .active{
+  background-color: #000;
+}
+
+.carousel-indicators li{
+  border-color: #000;
 }
 
 #footer {

@@ -45,7 +45,7 @@
       <!-- Navigation -->
       <div id="sidebar" class="col-sm-2">
         <div id="nav-container">
-          <h1 id="brand">Sara Metz</h1>
+          <div id="brand"><h1>Sara Metz</h1><!-- <h5>Software Developer</h5> --></div>
           <ul class="nav nav-stacked" id="sm-nav">
             <li class="active"><a href="#" class="home-link" data-id="home"><h5>HOME</h5></a></li>
             <li><a href="#" class="scroll-link" data-id="portfolio"><h5>PORTFOLIO</h5></a></li>
@@ -61,81 +61,153 @@
       <div id="content" class="col-sm-10 col-sm-offset-2">
         <div class="container">
           <div id="portfolio" class="page-section">
-            <h3>Featured Projects</h3>
-            <div class="row">
-              <div class="row project-row">
-                  <div class="col-sm-6 img-holder">
-                    <img src="file:///E:/My%20Documents/GitHub/portfolio-website/images/website-image.png" id="img-web" class="project-img"/>
+            <div class="col-sm-offset-1 col-sm-10">
+              <h3>Featured Projects</h3>
+            </div>
+            <div id="project-grid" class="col-sm-10 col-sm-offset-1">
+              <div class="row">
+
+                <div class="col-sm-4">
+                  <div class="project-cell">
+                    <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/27/27792/minimal-white-iphone5-template-preview-copy-300x200.jpg?1374116266" class="project-thumb"/>
+                    <div class="project-title"><h5>Coming Soon</h5></div>
                   </div>
-                  <div class="col-sm-6 project-desc">
-                    <h4>This Website</h4>
-                    <p> 
-                        I developed this website using HTML and CSS to further my experience in web development.
-                    </p>
-                    <h5>Technologies Used:</h5>
-                    <ul>
-                      <li>HTML</li>
-                      <li>CSS</li>
-                    </ul>
-                    <h5>Website:</h5>
-                    <a href="http://smetz.co.nz/">http://smetz.co.nz/</a>
-                    <br><br>
-                    <a href="./webproject.html" class="project-info-link"><button type="button" class="project-btn">More Info</button></a>
+                </div>
+                <div class="col-sm-4">
+                  <div class="project-cell">
+                    <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/27/27792/minimal-white-iphone5-template-preview-copy-300x200.jpg?1374116266" class="project-thumb"/>
+                    <div class="project-title"><h5>Coming Soon</h5></div>
                   </div>
-                  <div class="clearfix hidden-xs"></div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="project-cell">
+                    <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/27/27792/minimal-white-iphone5-template-preview-copy-300x200.jpg?1374116266" class="project-thumb"/>
+                    <div class="project-title"><h5>Coming Soon</h5></div>
+                  </div>
+                </div>
               </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="project-cell">
+                    <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/27/27792/minimal-white-iphone5-template-preview-copy-300x200.jpg?1374116266" class="project-thumb"/>
+                    <div class="project-title"><h5>Coming Soon</h5></div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="project-cell">
+                    <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/27/27792/minimal-white-iphone5-template-preview-copy-300x200.jpg?1374116266" class="project-thumb"/>
+                    <div class="project-title"><h5>Coming Soon</h5></div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="project-cell">
+                    <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/27/27792/minimal-white-iphone5-template-preview-copy-300x200.jpg?1374116266" class="project-thumb"/>
+                    <div class="project-title"><h5>Coming Soon</h5></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="project-carousel" class="carousel slide col-sm-10 col-sm-offset-1">
+              <button id="all-proj-btn" type="button" class="project-btn">View More</button>
               
+              <!-- Indicators -->
+              <!-- <ol class="carousel-indicators">
+                <li data-target="#project-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#project-carousel" data-slide-to="1"></li>
+                <li data-target="#project-carousel" data-slide-to="2"></li>
+              </ol> -->
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                    
+                    <div class="col-sm-6 img-holder">
+                      <img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/27/27792/minimal-white-iphone5-template-preview-copy-300x200.jpg?1374116266" id="img-web" class="project-img"/>
+                    </div>
+                    <div class="col-sm-6 project-desc">
+                      <h4>This Website</h4>
+                      <p> 
+                          I developed this website using HTML and CSS to further my experience in web development.
+                      </p>
+                      <h5>Technologies Used:</h5>
+                      <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                      </ul>
+                      <h5>Website:</h5>
+                      <a href="http://smetz.co.nz/">http://smetz.co.nz/</a>
+                    </div>
+                    <div class="clearfix hidden-xs"></div>
+
+                </div>
+                
+              </div>
+
+              <!-- Controls -->
+              <div id="carousel-controls">
+                <a id="carousel-left-btn" class="left" href="#project-carousel" data-slide="prev">
+                  <button type="button" class="project-btn"><span class="glyphicon glyphicon-arrow-left"></span></button>
+                </a>
+                <a id="carousel-right-btn" class="right" href="#project-carousel" data-slide="next">
+                  <button type="button" class="project-btn"><span class="glyphicon glyphicon-arrow-right"></span></button>
+                </a>
+              </div>
             </div>
           </div> <!-- /portfolio -->
           <br>
           <div id="about" class="page-section">
-            <h3>About me</h3>
-            <div class="row">
-              <div id="about-text" class="col-sm-6">
-                  <p>
-                    Hi, I'm Sara Metz, a software developer based in Auckland, New Zealand. I am currently in my fourth and final year of study towards a Bachelor of Engineering specialising in Software Engineering.
-                  </p>
+            <div class="col-sm-10 col-sm-offset-1">
+              <h3>About me</h3>
+              <div class="row">
+                <div id="about-text" class="col-sm-6">
+                    <p>
+                      Hi, I'm Sara Metz, a software developer based in Auckland, New Zealand. I am currently in my fourth and final year of study towards a Bachelor of Engineering specialising in Software Engineering.
+                    </p>
 
-                  <p> I'm interested in mobile application programming, computer graphics, computer
-                      vision and anything new I can learn about programming and computers.
-                  </p>
-                  
-                  <p> 
-                    If you are interested in working with me or just want to say hello <a href="#" class="scroll-link" data-id="contact">contact me</a>.
-                  </p>
-                </div>
-              </div>
-               <div id="skills-text" class="row">
-                  <div id="hr-first">Beginner</div>
-                  <div id="hr-second">Proficient</div>
-                  <div id="hr-third">Expert</div>
+                    <p> I'm interested in mobile application programming, computer graphics, computer
+                        vision and anything new I can learn about programming and computers.
+                    </p>
+                    
+                    <p> 
+                      If you are interested in working with me or just want to say hello <a href="#" class="scroll-link" data-id="contact">contact me</a>.
+                    </p>
+                  </div>
+                 <div id="skills-text" class="col-sm-6">
+                    <div id="hr-first">Beginner</div>
+                    <div id="hr-second">Proficient</div>
+                    <div id="hr-third">Expert</div>
 
-                  <h4>Skills</h4>
-                  <h4 id="java" class="skill-bar">{ Java };</h4>          
-                  <h4 id="python" class="skill-bar">python</h4>           
-                  <h4 id="obj-c" class="skill-bar">[Objective-C];</h4>            
-                  <h4 id="html" class="skill-bar">&lt; html /&gt;</h4>         
-                  <h4 id="javascript" class="skill-bar">{JavaScript};</h4>   
-                  <h4 id="css" class="skill-bar">.{ CSS }</h4>   
-                  <h4 id="cpp" class="skill-bar">{ C++ };</h4>            
-                  <h4 id="c-sh" class="skill-bar">{ C# };</h4>  
-                  
+                    <h4>Skills</h4>
+                    <h4 id="java" class="skill-bar">{ Java };</h4>          
+                    <h4 id="python" class="skill-bar">python</h4>           
+                    <h4 id="obj-c" class="skill-bar">[Objective-C];</h4>            
+                    <h4 id="html" class="skill-bar">&lt; html /&gt;</h4>         
+                    <h4 id="javascript" class="skill-bar">{JavaScript};</h4>   
+                    <h4 id="css" class="skill-bar">.{ CSS }</h4>   
+                    <h4 id="cpp" class="skill-bar">{ C++ };</h4>            
+                    <h4 id="c-sh" class="skill-bar">{ C# };</h4>  
+                    
+                  </div>
                 </div>
+            </div>
           </div> <!-- /about -->
           <br>
           <div id="contact" class="page-section">
-            <h3>Contact me</h3>
-              <div class="well well-large well-transparent clearfix">
-                <i class="icon-envelope icon-3x pull-left"></i>
-                <b>Email</b><br> If you would like to contact me via email for any reason, you can email me at sara@smetz.co.nz and I will try to respond as soon as possible.
-              </div>
-              <div class="well well-large well-transparent clearfix">
-                <i class="icon-linkedin icon-3x pull-left"></i>
-                <b>LinkedIn</b><br> I have a LinkedIn account for professional networking and business inquiries, you can view my profile <a href="http://nz.linkedin.com/pub/sara-metz/74/b37/43b/">here</a>.
-              </div>
-              <div class="well well-large well-transparent clearfix">
-                <i class="icon-github icon-3x pull-left"></i>
-                <b>GitHub</b><br> I also have GitHub for some of my personal projects. <a href="https://github.com/sarametz">Have a look</a>.
+            <div class="col-sm-10 col-sm-offset-1">
+              <h3>Contact me</h3>
+                <div class="well well-large well-transparent clearfix">
+                  <i class="icon-envelope icon-3x pull-left"></i>
+                  <b>Email</b><br> If you would like to contact me via email for any reason, you can email me at sara@smetz.co.nz and I will try to respond as soon as possible.
+                </div>
+                <div class="well well-large well-transparent clearfix">
+                  <i class="icon-linkedin icon-3x pull-left"></i>
+                  <b>LinkedIn</b><br> I have a LinkedIn account for professional networking and business inquiries, you can view my profile <a href="http://nz.linkedin.com/pub/sara-metz/74/b37/43b/">here</a>.
+                </div>
+                <div class="well well-large well-transparent clearfix">
+                  <i class="icon-github icon-3x pull-left"></i>
+                  <b>GitHub</b><br> I also have GitHub for some of my personal projects. <a href="https://github.com/sarametz">Have a look</a>.
+                </div>
               </div>
           </div> <!-- /contact -->
 

@@ -1,9 +1,9 @@
 /*  
- *	scrolling effect of the navigation
- *	from http://alijafarian.com/responsive-page-scrolling-with-jquery-and-bootstrap/
+ *	
+ *	
  */
 
-$(document).ready(function() {
+$(window).load(function() {
 	/////////////
 	//Make start on content 
 	//TESTING ONLY
@@ -18,8 +18,12 @@ $(document).ready(function() {
 
 	////////////
 
-	$("#portfolio, #about, #contact").css("min-height", $(window).height() );
+	$("#portfolio, #about, #contact").css("height", $(window).height() );
 	$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
+	$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
+	console.log($("#project-carousel").height());
+	$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
+	$("#project-carousel").addClass("hidden");
 
 	// navigation click actions	
 	$('.scroll-link').on('click', function(event){
@@ -68,6 +72,19 @@ $(document).ready(function() {
 		$("#content-wrapper").animate({"left": "100%"},750);
 	});
 	
+	$(".project-cell").on("click", function(event){
+		//move carousel to selected slide
+		//show carousel and hide thumbs
+		$("#project-grid").addClass("hidden");
+		$("#project-carousel").removeClass("hidden"); 
+	});
+
+	$("#all-proj-btn").on("click", function(event){
+		//show thumbs and hide carousel
+		$("#project-grid").removeClass("hidden");
+		$("#project-carousel").addClass("hidden"); 
+	});
+
 });
 
 //update css on window resize
