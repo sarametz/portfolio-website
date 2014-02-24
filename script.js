@@ -10,10 +10,12 @@ $(window).load(function() {
 		$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
 		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 		$("#about-content").css("margin-top", - $("#about-content").height()/2 );
-		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
-		$("#project-carousel").addClass("hidden");
+		$("#intro").css("margin-top", - $("#intro").height()/2 );
+			
 	}
 
+	$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
+	$("#project-carousel").addClass("hidden");
 	$("#small-nav, #home-small").css("min-height", $(window).height()/2);
 	$("#intro-small").css("margin-top", - $("#intro-small").height()/2 );
 
@@ -30,6 +32,9 @@ $(window).load(function() {
 		var offSet = 0;
 		var scrollTopVal = ($("#content").scrollTop() + $(sectionID).offset().top) - offSet;
 		console.log("scrolltop = " + $("#content").scrollTop() );
+		$("*").each(function(index, element){
+			console.log( $(this).attr('id') +" = "+ $(this).scrollTop() );
+		});
 
 		//check if coming from home or other
 		if(!($("#content-wrapper").css("left") == "0px") && $(window).width() > 768){
@@ -52,7 +57,7 @@ $(window).load(function() {
 			// if nav already on left scroll to section
 			$('#content').animate({scrollTop:scrollTopVal}, 750);					
 		}else{
-			$('html,body').animate({scrollTop:scrollTopVal}, 750);						
+			$('#wrap').animate({scrollTop:scrollTopVal}, 750);						
 		}
 
 	});
@@ -133,12 +138,14 @@ $(window).load(function() {
 	$(".project-cell").on("click", function(event){
 		//move carousel to selected slide
 		//show carousel and hide thumbs
+		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
 		$("#project-grid").addClass("hidden");
 		$("#project-carousel").removeClass("hidden"); 
 	});
 
 	$("#all-proj-btn").on("click", function(event){
 		//show thumbs and hide carousel
+		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 		$("#project-grid").removeClass("hidden");
 		$("#project-carousel").addClass("hidden"); 
 	});
@@ -184,6 +191,7 @@ $(window).resize(function() {
 		}
 		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 
+		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
 	}
 
 	$("#small-nav, #home-small").css("min-height", $(window).height()/2);
