@@ -11,11 +11,11 @@ $(window).load(function() {
 		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 		$("#about-content").css("margin-top", - $("#about-content").height()/2 );
 		$("#intro").css("margin-top", - $("#intro").height()/2 );
+		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
 			
 	}
 
-	$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
-	$("#project-carousel").addClass("hidden");
+$("#project-carousel").addClass("hidden");
 	$("#small-nav, #home-small").css("min-height", $(window).height()/2);
 	$("#intro-small").css("margin-top", - $("#intro-small").height()/2 );
 
@@ -26,15 +26,11 @@ $(window).load(function() {
 		event.preventDefault();
 		//set active tab
 		$("#sidebar li, #small-nav li").removeClass("active");
-		$(this).parent().addClass("active");
+		$("a[data-id=\""+ $(this).attr("data-id") +"\"]").parent().addClass("active");
 
 		var sectionID = "#" + $(this).attr("data-id");
 		var offSet = 0;
 		var scrollTopVal = ($("#content").scrollTop() + $(sectionID).offset().top) - offSet;
-		console.log("scrolltop = " + $("#content").scrollTop() );
-		$("*").each(function(index, element){
-			console.log( $(this).attr('id') +" = "+ $(this).scrollTop() );
-		});
 
 		//check if coming from home or other
 		if(!($("#content-wrapper").css("left") == "0px") && $(window).width() > 768){
@@ -57,7 +53,10 @@ $(window).load(function() {
 			// if nav already on left scroll to section
 			$('#content').animate({scrollTop:scrollTopVal}, 750);					
 		}else{
-			$('#wrap').animate({scrollTop:scrollTopVal}, 750);						
+			$('#wrap').animate({scrollTop:scrollTopVal}, 750);
+			//set home as active as will never see the navigation while on another section
+			$("#sidebar li, #small-nav li").removeClass("active");	
+			$("a[data-id=\"small-homepage\"]").parent().addClass("active");					
 		}
 
 	});
@@ -137,17 +136,29 @@ $(window).load(function() {
 
 	$(".project-cell").on("click", function(event){
 		//move carousel to selected slide
-		//show carousel and hide thumbs
-		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
-		$("#project-grid").addClass("hidden");
-		$("#project-carousel").removeClass("hidden"); 
+		var slideNum = parseInt( $(this).attr("slide-id") );
+		if(!isNaN(slideNum)){
+			$(".carousel").carousel(slideNum);
+			//show carousel and hide thumbs
+			$("#project-grid").fadeOut(400, function(){
+				$("#project-grid").addClass("hidden");
+				$("#project-carousel").removeClass('hidden').hide().fadeIn(400, function(){	
+					$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 ); 
+				});
+			});
+		}
 	});
 
 	$("#all-proj-btn").on("click", function(event){
 		//show thumbs and hide carousel
-		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
-		$("#project-grid").removeClass("hidden");
-		$("#project-carousel").addClass("hidden"); 
+
+		$("#project-carousel").fadeOut(400, function(){
+			$("#project-carousel").addClass("hidden");
+			$("#project-grid").removeClass('hidden').hide().fadeIn(400, function(){	
+				$("#project-grid").css("margin-top", - $("#project-grid").height()/2 ); 
+			});
+		});
+		//make sure it's in the right place
 	});
 
 	function updateActiveNav(){
