@@ -9,7 +9,7 @@ html, body {
   font-size: 15px;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
   font-family: 'Philosopher', sans-serif; 
 }
 
@@ -17,7 +17,7 @@ h5 {
   font-size: 16px;
 }
 
-h4, h5, p {
+h5, p {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -163,10 +163,20 @@ h4, h5, p {
   left: calc(50% + 10px);
 }
 
+.carousel-inner{
+  padding:50px 0;
+}
+
 #all-proj-btn{
   position: absolute;
   bottom: 100%;
   right: 10px;
+}
+
+#project-title{
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
 }
 
 .carousel-indicators{
@@ -207,7 +217,7 @@ h4, h5, p {
 
 #skills-text {
   position: relative;
-  top:-10px;
+  top: 0px;
   padding: 0px 60px;
 }
 
@@ -268,7 +278,7 @@ h4, h5, p {
   #content{
     position: relative;
     height:100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     padding:0 0px;
   }
 
