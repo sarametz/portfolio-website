@@ -5,7 +5,7 @@
 
 $(window).load(function() {
 
-	$("#portfolio, #about, #contact").css("height", $(window).height() );
+	$("#portfolio, #about").css("height", $(window).height() );
 	$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
 	$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 	$("#about-content").css("margin-top", - $("#about-content").height()/2 );
@@ -23,19 +23,11 @@ $(window).load(function() {
 		$(this).parent().addClass("active");
 
 		var sectionID = "#" + $(this).attr("data-id");
-		var offSet = 50;
+		var offSet = 0;
 		var scrollTopVal = ($("#content").scrollTop() + $(sectionID).offset().top) - offSet;
 		
-		//don't animate if already at section
-		if( $("#content").scrollTop() == scrollTopVal ){
-			return;
-		}
-
 		//check if coming from home or other
-		if($("#content-wrapper").css("left") == "0px"){
-			// if nav already on left scroll to section
-			$('#content').animate({scrollTop:scrollTopVal}, 750);
-		}else{
+		if(!($("#content-wrapper").css("left") == "0px")){
 			//move to section without scrolling
 			$("#content").scrollTop( scrollTopVal );
 			
@@ -45,8 +37,15 @@ $(window).load(function() {
 									$("#sidebar").css({ "position": "fixed", "right": "auto", "left":"0%"});
 									$("#home").addClass("hidden");
 								});
-			$("#content-wrapper").animate({"left": 0}, 750);			
-			
+			$("#content-wrapper").animate({"left": 0}, 750);	
+
+		//don't animate if already at section
+		}else if( $("#content").scrollTop() == scrollTopVal ){
+			return;
+		
+		}else{
+			// if nav already on left scroll to section
+			$('#content').animate({scrollTop:scrollTopVal}, 750);					
 		}
 	});
 
@@ -72,11 +71,10 @@ $(window).load(function() {
 		if(event.originalEvent.wheelDelta > 0 || event.originalEvent.deltaY < 0) {
 	         //scroll up
 	        console.log('mouseW Up');
-	        var offSet = 50;
+	        var offSet = 0;
 
 			var diffs = [ 	offSet - $("#portfolio").offset().top,
-         					offSet - $("#about").offset().top,
-         					offSet - $("#contact").offset().top	];
+         					offSet - $("#about").offset().top ];
 
          	// remove negative from array 
          	diffs = diffs.filter(function(element){
@@ -93,11 +91,10 @@ $(window).load(function() {
 	     }else {
 	        //scroll down
 	        console.log('mouseW Down');
-	        var offSet = 50;
+	        var offSet = 0;
 
 			var diffs = [ 	offSet - $("#portfolio").offset().top,
-         					offSet - $("#about").offset().top,
-         					offSet - $("#contact").offset().top	];
+         					offSet - $("#about").offset().top ];
 
          	// remove positive and small negative from array 
          	diffs = diffs.filter(function(element){
@@ -147,10 +144,6 @@ $(window).load(function() {
 			//get tops
 			var pTop = $("#portfolio").offset().top;
 			var aTop = $("#about").offset().top;
-			var cTop = $("#contact").offset().top;
-
-			console.log(" top = " + $("#content").scrollTop());
-			console.log("ptop = " + pTop+" a="+aTop+" c="+cTop);
 
 			if ( pTop < threshold && pTop > -threshold) {
 	            $("a[data-id=\"portfolio\"]").parent().addClass("active");
@@ -158,8 +151,6 @@ $(window).load(function() {
         	}else if( aTop < threshold && aTop > -threshold) {
 	            $("a[data-id=\"about\"]").parent().addClass("active");
 
-        	}else if(cTop < threshold && cTop > -threshold){
-	            $("a[data-id=\"contact\"]").parent().addClass("active");
         	}
 
 		}
@@ -177,7 +168,7 @@ $(window).load(function() {
 
 //update css on window resize
 $(window).resize(function() {
-	$("#portfolio, #about, #contact").css("min-height", $(window).height() );
+	$("#portfolio, #about").css("min-height", $(window).height() );
 	$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
 	$("#about-content").css("margin-top", - $("#about-content").height()/2 );
 	if($("#content-wrapper").css("left") == "0px"){

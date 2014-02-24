@@ -57,7 +57,7 @@ h5, p {
 }
 
 #sm-nav .active {
-  color:#fbb829;
+  color:#91b8a3;
 }
 
 .nav > li > a:focus, .nav > li > a:hover  {
@@ -76,7 +76,7 @@ h5, p {
 }
 
 #home {
-  background: #fbb829;
+  background: #b7d9c0;
 }
 
 #portfolio{
@@ -231,7 +231,7 @@ h5, p {
 
 .skill-bar{
   position: relative;
-  background-color: #fbb829;
+  background-color: #b7d9c0;
   z-index: 5;
 }
 
@@ -243,6 +243,7 @@ h5, p {
 #css { width: 70%; }
 #cpp { width: 40%; }
 #c-sh { width: 35%; }
+
 
 @media(min-width: 768px) {
   #static-nav{

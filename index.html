@@ -21,6 +21,7 @@
   <!-- CSS -->
     <link href="./bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font-awesome-4.0.3/css/font-awesome.min.css">
 
     <link href='style.css' rel='stylesheet' type='text/css'>
     
@@ -38,7 +39,7 @@
           <h3 id="intro">
             Hi, I'm <b>Sara</b>, I'm a software engineering student at the University of Auckland 
             and an aspiring software developer. Have a look around and if you like what you see, 
-            <a href="./contact.html"><i>contact me</i></a>.
+            <a href="#" class="scroll-link" data-id="about"><i>get in touch</i></a>.
           </h3>
       </div>
 
@@ -50,7 +51,6 @@
             <li class="active"><a href="#" class="home-link" data-id="home"><h5>HOME</h5></a></li>
             <li><a href="#" class="scroll-link" data-id="portfolio"><h5>PORTFOLIO</h5></a></li>
             <li><a href="#" class="scroll-link" data-id="about"><h5>ABOUT ME</h5></a></li>
-            <li><a href="#" class="scroll-link" data-id="contact"><h5>CONTACT</h5></a></li>
           </ul>
         </div>  
       </div>
@@ -146,66 +146,60 @@
               </div>
             </div>
           </div> <!-- /portfolio -->
-
-          <br>
           <div id="about" class="page-section">
             <div id="about-container" class="col-sm-10 col-sm-offset-1">
               <div id="about-content" class="row">
-                             
-                <div id="about-text" class="col-sm-6">
-                    <h3>About Me</h3>
-                    <p>
-                      Hi, I'm Sara Metz, a software developer based in Auckland, New Zealand. I am currently in my fourth and final year of study towards a Bachelor of Engineering specialising in Software Engineering.
-                    </p>
+                <div class="row">
+                  <div id="about-text" class="col-sm-6">
+                      <h3>About Me</h3>
+                      <p>
+                        Hi, I'm Sara Metz, a software developer based in Auckland, New Zealand. I am currently in my fourth and final year of study towards a Bachelor of Engineering specialising in Software Engineering.
+                      </p>
 
-                    <p> I'm interested in mobile application programming, computer graphics, computer
-                        vision and anything new I can learn about programming and computers.
-                    </p>
-                    
-                    <p> 
-                      If you are interested in working with me or just want to say hello <a href="#" class="scroll-link" data-id="contact">contact me</a>.
-                    </p>
-                  </div>
-                 <div id="skills-text" class="col-sm-6">
+                      <p> I'm interested in mobile application programming, computer graphics, computer
+                          vision and anything new I can learn about programming and computers.
+                      </p>
+                      
+                      <p> 
+                        If you are interested in working with me or just want to say hello <a href="mailto:sara@smetz.co.nz">contact me</a>.
+                      </p>
+                    </div>
+                  <div id="skills-text" class="col-sm-6">
                     <div id="skills-graph">
-                  <h3> Skills </h3>
-                    <div id="hr-first">Beginner</div>
-                    <div id="hr-second">Proficient</div>
-                    <div id="hr-third">Expert</div>
+                      <h3> Skills </h3>
+                      <div id="hr-first">Beginner</div>
+                      <div id="hr-second">Proficient</div>
+                      <div id="hr-third">Expert</div>
 
-                    <h4> </h4>
-                    <h4 id="java" class="skill-bar">{ Java };</h4>          
-                    <h4 id="python" class="skill-bar">python</h4>           
-                    <h4 id="obj-c" class="skill-bar">[Objective-C];</h4>            
-                    <h4 id="html" class="skill-bar">&lt; html /&gt;</h4>         
-                    <h4 id="javascript" class="skill-bar">{JavaScript};</h4>   
-                    <h4 id="css" class="skill-bar">.{ CSS }</h4>   
-                    <h4 id="cpp" class="skill-bar">{ C++ };</h4>            
-                    <h4 id="c-sh" class="skill-bar">{ C# };</h4>  
+                      <h4> </h4>
+                      <h4 id="java" class="skill-bar">{ Java };</h4>          
+                      <h4 id="python" class="skill-bar">Python</h4>           
+                      <h4 id="obj-c" class="skill-bar">[Objective-C];</h4>            
+                      <h4 id="html" class="skill-bar">&lt; HTML /&gt;</h4>         
+                      <h4 id="javascript" class="skill-bar">{ JavaScript };</h4>   
+                      <h4 id="css" class="skill-bar">.{ CSS }</h4>   
+                      <h4 id="cpp" class="skill-bar">{ C++ };</h4>            
+                      <h4 id="c-sh" class="skill-bar">{ C# };</h4>  
                     </div>
                   </div>
                 </div>
-            </div>
-          </div> <!-- /about -->
-          <br>
-          <div id="contact" class="page-section">
-            <div class="col-sm-10 col-sm-offset-1">
-              <h3>Contact me</h3>
-                <div class="well well-large well-transparent clearfix">
-                  <i class="icon-envelope icon-3x pull-left"></i>
-                  <b>Email</b><br> If you would like to contact me via email for any reason, you can email me at sara@smetz.co.nz and I will try to respond as soon as possible.
-                </div>
-                <div class="well well-large well-transparent clearfix">
-                  <i class="icon-linkedin icon-3x pull-left"></i>
-                  <b>LinkedIn</b><br> I have a LinkedIn account for professional networking and business inquiries, you can view my profile <a href="http://nz.linkedin.com/pub/sara-metz/74/b37/43b/">here</a>.
-                </div>
-                <div class="well well-large well-transparent clearfix">
-                  <i class="icon-github icon-3x pull-left"></i>
-                  <b>GitHub</b><br> I also have GitHub for some of my personal projects. <a href="https://github.com/sarametz">Have a look</a>.
+                <div class="row">
+                  <div id="links-col" class="col-sm-12">
+                    <a href="mailto:sara@smetz.co.nz">
+                      <button id="email-button" type="button" class="project-btn"><i class="fa fa-envelope-o fa-2x"></i></button>
+                    </a>
+                    <a href="https://github.com/sarametz">
+                      <button id="github-button" type="button" class="project-btn"><i class="fa fa-github fa-2x"></i></button>
+                    </a>
+                    <a href="http://nz.linkedin.com/pub/sara-metz/74/b37/43b/">
+                      <button id="linkedin-button" type="button" class="project-btn"><i class="fa fa-linkedin fa-2x"></i></button>
+                    </a>
+                  
+                  </div>
                 </div>
               </div>
-          </div> <!-- /contact -->
-
+            </div>
+          </div> <!-- /about -->
         </div> <!-- /container -->
 
       <!-- <div id="footer">
