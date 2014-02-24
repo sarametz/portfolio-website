@@ -5,13 +5,17 @@
 
 $(window).load(function() {
 
-	$("#portfolio, #about").css("height", $(window).height() );
-	$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
-	$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
-	$("#about-content").css("margin-top", - $("#about-content").height()/2 );
-	$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
-	$("#project-carousel").addClass("hidden");
+	if($(window).width() > 768){
+		$("#portfolio, #about").css("height", $(window).height() );
+		$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
+		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
+		$("#about-content").css("margin-top", - $("#about-content").height()/2 );
+		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
+		$("#project-carousel").addClass("hidden");
+	}
 
+	$("#small-nav, #home-small").css("min-height", $(window).height()/2);
+	$("#intro-small").css("margin-top", - $("#intro-small").height()/2 );
 
 
 
@@ -19,15 +23,16 @@ $(window).load(function() {
 	$('.scroll-link').on('click', function(event){
 		event.preventDefault();
 		//set active tab
-		$("#sidebar li").removeClass("active");
+		$("#sidebar li, #small-nav li").removeClass("active");
 		$(this).parent().addClass("active");
 
 		var sectionID = "#" + $(this).attr("data-id");
 		var offSet = 0;
 		var scrollTopVal = ($("#content").scrollTop() + $(sectionID).offset().top) - offSet;
-		
+		console.log("scrolltop = " + $("#content").scrollTop() );
+
 		//check if coming from home or other
-		if(!($("#content-wrapper").css("left") == "0px")){
+		if(!($("#content-wrapper").css("left") == "0px") && $(window).width() > 768){
 			//move to section without scrolling
 			$("#content").scrollTop( scrollTopVal );
 			
@@ -43,10 +48,13 @@ $(window).load(function() {
 		}else if( $("#content").scrollTop() == scrollTopVal ){
 			return;
 		
-		}else{
+		}else if($(window).width() > 768){
 			// if nav already on left scroll to section
 			$('#content').animate({scrollTop:scrollTopVal}, 750);					
+		}else{
+			$('html,body').animate({scrollTop:scrollTopVal}, 750);						
 		}
+
 	});
 
 	$('.home-link').on('click', function(event){
@@ -62,6 +70,12 @@ $(window).load(function() {
 	});
 	
 	$("#content").on("mousewheel wheel", function(event){
+		
+		//if on a small screen, allow scroll
+		if($(window).width() < 768){
+			return true;
+		}
+
 		event.preventDefault();
 		//don't do anything if animating already
 		if($(":animated").length > 0){
@@ -157,23 +171,22 @@ $(window).load(function() {
 		
 	}
 
-		/////////////
-	//Make start on content 
-	//TESTING ONLY
-	$("a[data-id=\"portfolio\"]").click();
-	updateActiveNav();
-	////////////
-
 });
 
 //update css on window resize
 $(window).resize(function() {
-	$("#portfolio, #about").css("min-height", $(window).height() );
-	$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
-	$("#about-content").css("margin-top", - $("#about-content").height()/2 );
-	if($("#content-wrapper").css("left") == "0px"){
-		$("#static-nav").css({"left": $("#sidebar").outerWidth() - $("#static-nav").outerWidth() });			
-	}
-	$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
+	if($(window).width() > 768){
+		$("#portfolio, #about").css("height", $(window).height() );
+		$("#nav-container").css("margin-top", - $("#nav-container").height()/2 );
+		$("#about-content").css("margin-top", - $("#about-content").height()/2 );
+		if($("#content-wrapper").css("left") == "0px"){
+			$("#static-nav").css({"left": $("#sidebar").outerWidth() - $("#static-nav").outerWidth() });			
+		}
+		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 
+	}
+
+	$("#small-nav, #home-small").css("min-height", $(window).height()/2);
+	$("#intro-small").css("margin-top", - $("#intro-small").height()/2 );
+	
 });

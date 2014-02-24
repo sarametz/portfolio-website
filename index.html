@@ -34,7 +34,7 @@
   
   <div id="wrap" class="row">
 
-    <div id="static-nav">
+    <div id="static-nav" class="hidden-xs">
       <div id="home" class="container-fluid col-sm-10">
           <h3 id="intro">
             Hi, I'm <b>Sara</b>, I'm a software engineering student at the University of Auckland 
@@ -58,10 +58,33 @@
 
     <!-- Begin page content -->
     <div id="content-wrapper">
-      <div id="content" class="col-sm-10 col-sm-offset-2">
+      <div id="content" class="col-sm-10 col-sm-offset-2 col-xs-12">
+
+        <div id="small-homepage" class="container visible-xs page-section">
+          <!-- Navigation -->
+          <div id="small-nav" class="col-xs-12">
+            <div id="nav-container-small">
+              <div id="brand-small"><h3>Sara Metz</h3></div>
+              <ul class="nav nav-stacked" id="sm-nav-small">
+                <li class="active"><a href="#" class="scroll-link" data-id="small-homepage"><h5>HOME</h5></a></li>
+                <li><a href="#" class="scroll-link" data-id="portfolio"><h5>PORTFOLIO</h5></a></li>
+                <li><a href="#" class="scroll-link" data-id="about"><h5>ABOUT ME</h5></a></li>
+              </ul>
+            </div>  
+          </div>
+
+          <div id="home-small" class="col-xs-12">
+              <h5 id="intro-small">
+                Hi, I'm <b>Sara</b>, I'm a software engineering student at the University of Auckland 
+                and an aspiring software developer. Have a look around and if you like what you see, 
+                <a href="#" class="scroll-link" data-id="about"><i>get in touch</i></a>.
+              </h5>
+          </div>
+        </div>
+
         <div class="container">
           <div id="portfolio" class="page-section">
-            <div id="project-grid" class="col-sm-10 col-sm-offset-1">
+            <div id="project-grid" class="col-sm-10 col-sm-offset-1 hidden-xs">
             <h3>Featured Projects</h3>
               <div class="row">
 
@@ -106,7 +129,7 @@
               </div>
             </div>
 
-            <div id="project-carousel" class="carousel slide col-sm-10 col-sm-offset-1">
+            <div id="project-carousel" class="carousel slide col-sm-10 col-sm-offset-1 hidden-xs">
             <h3 id="project-title" >Featured Projects</h3>
               <button id="all-proj-btn" type="button" class="project-btn">View More</button>
               <!-- Wrapper for slides -->
@@ -145,12 +168,17 @@
                 </a>
               </div>
             </div>
+
+            <div class="visible-xs">
+              <!-- stuff only visible on mobile -->
+              <p>Stuff here fksfhksdjfh dfjhsdfjh sdjhfkjfhskjfh ff dkjfhskf dfsjhf dsfjkf sdfjhsdjkfh sjdfdsjfhdsjfhjdfsdjfhsjdfh sdfds fsdkjfsjkfds fsdkjfhdskjf </p>
+            </div>
           </div> <!-- /portfolio -->
           <div id="about" class="page-section">
-            <div id="about-container" class="col-sm-10 col-sm-offset-1">
+            <div id="about-container" class="col-sm-10 col-sm-offset-1 col-xs-12">
               <div id="about-content" class="row">
                 <div class="row">
-                  <div id="about-text" class="col-sm-6">
+                  <div id="about-text" class="col-sm-6 col-xs-12">
                       <h3>About Me</h3>
                       <p>
                         Hi, I'm Sara Metz, a software developer based in Auckland, New Zealand. I am currently in my fourth and final year of study towards a Bachelor of Engineering specialising in Software Engineering.
@@ -164,7 +192,7 @@
                         If you are interested in working with me or just want to say hello <a href="mailto:sara@smetz.co.nz">contact me</a>.
                       </p>
                     </div>
-                  <div id="skills-text" class="col-sm-6">
+                  <div id="skills-text" class="col-sm-6 col-xs-12">
                     <div id="skills-graph">
                       <h3> Skills </h3>
                       <div id="hr-first">Beginner</div>
@@ -184,17 +212,24 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div id="links-col" class="col-sm-12">
-                    <a href="mailto:sara@smetz.co.nz">
-                      <button id="email-button" type="button" class="project-btn"><i class="fa fa-envelope-o fa-2x"></i></button>
-                    </a>
-                    <a href="https://github.com/sarametz">
-                      <button id="github-button" type="button" class="project-btn"><i class="fa fa-github fa-2x"></i></button>
-                    </a>
-                    <a href="http://nz.linkedin.com/pub/sara-metz/74/b37/43b/">
-                      <button id="linkedin-button" type="button" class="project-btn"><i class="fa fa-linkedin fa-2x"></i></button>
-                    </a>
-                  
+                  <div id="links-col" class="col-sm-12 col-xs-12">
+                      <ul id="links-list">
+                        <li>
+                        <a href="mailto:sara@smetz.co.nz">
+                          <button id="email-button" type="button" class="project-btn"><i class="fa fa-envelope-o fa-2x"></i></button>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/sarametz">
+                          <button id="github-button" type="button" class="project-btn"><i class="fa fa-github fa-2x"></i></button>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://nz.linkedin.com/pub/sara-metz/74/b37/43b/">
+                          <button id="linkedin-button" type="button" class="project-btn"><i class="fa fa-linkedin fa-2x"></i></button>
+                        </a>
+                        </li>
+                      </ul>
                   </div>
                 </div>
               </div>

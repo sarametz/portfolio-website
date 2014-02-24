@@ -7,6 +7,7 @@
 html, body {
   height: 100%;
   font-size: 15px;
+  overflow-x:hidden;
 }
 
 h1, h2, h3, h4{
@@ -79,19 +80,7 @@ h5, p {
   background: #b7d9c0;
 }
 
-#portfolio{
-  position: relative;
-}
 
-#project-grid{
-  position: absolute;
-  top: 50%;
-}
-
-#project-carousel{
-  position: absolute;
-  top: 50%;
-}
 
 #portfolio .project-cell {
   background: #dededc;
@@ -196,14 +185,7 @@ h5, p {
   color: #fff;
 }
 
-#about {
-  position:relative;
-}
 
-#about-container{
-  position: absolute;
-  top: 50%;
-}
 
 #hr-first, #hr-second, #hr-third {
   position: absolute; 
@@ -218,8 +200,20 @@ h5, p {
 #skills-text {
   position: relative;
   top: 0px;
-  padding: 0px 60px;
 }
+
+@media(min-width: 992px){
+  #skills-text{
+    padding: 0px 20px;
+  }
+}
+
+@media(min-width:1200px;){
+  #skills-text{
+    padding: 0px 60px;
+  }
+}
+
 
 #skills-graph{
   position: relative;
@@ -283,14 +277,81 @@ h5, p {
     padding:0 0px;
   }
 
+  #about {
+    position:relative;
+  }
+
+  #about-container{
+    position: absolute;
+    top: 50%;
+  }
+
+  #portfolio{
+    position: relative;
+  }
+
+  #project-grid{
+    position: absolute;
+    top: 50%;
+  }
+
+  #project-carousel{
+    position: absolute;
+    top: 50%;
+  }
+
 }
 
+@media(max-width:767px){
+  
+  #sidebar {
+    position: absolute;
+    height:50%;
+  }
 
+  #home-small{
+    position: relative;
+    background: #b7d9c0;
+  }
 
+  #content-wrapper{
+    position: relative;
+  }
 
+  #content{
+    position: relative;
+    overflow: hidden;
+    padding:0px;
+  }
 
+  #portfolio, #about{ 
+    padding:15px;
+  }
 
+  #skills-text{
+    padding: 0px 10px;
+  }
+}
 
+#small-homepage{
+  text-align: center;
+}
 
+#intro-small{
+  position: absolute;
+  top:50%;
+}
 
+#small-nav .active {
+  color:#91b8a3;
+}
 
+#links-list{
+  text-align: center;
+  padding: 0;
+  margin-top:10px;
+}
+
+#links-list li {
+  display: inline-block;
+}
