@@ -214,20 +214,19 @@ h5, p {
   }
 }
 
-
 #skills-graph{
   position: relative;
 }
-
-#hr-first { margin-left: 30%;}
-#hr-second { margin-left: 60%;}
-#hr-third { margin-left: 90%;}
 
 .skill-bar{
   position: relative;
   background-color: #b7d9c0;
   z-index: 5;
 }
+
+#hr-first { margin-left: 30%;}
+#hr-second { margin-left: 60%;}
+#hr-third { margin-left: 90%;}
 
 #java { width: 89%; }
 #python { width: 85%; }
@@ -238,6 +237,12 @@ h5, p {
 #cpp { width: 40%; }
 #c-sh { width: 35%; }
 
+@media(max-width: 500px){
+  #skills-graph{
+    margin-right: 30px;
+  }
+
+}
 
 @media(min-width: 768px) {
   #static-nav{
