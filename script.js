@@ -12,7 +12,7 @@ $(window).load(function() {
 		$("#about-content").css("margin-top", - $("#about-content").height()/2 );
 		$("#intro").css("margin-top", - $("#intro").height()/2 );
 		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
-			
+		$("#project-carousel").carousel('pause');			
 	}
 
 $("#project-carousel").addClass("hidden");
@@ -203,6 +203,7 @@ $(window).resize(function() {
 		$("#project-grid").css("margin-top", - $("#project-grid").height()/2 );
 
 		$("#project-carousel").css("margin-top", - $("#project-carousel").height()/2 );
+		$("#project-carousel").carousel('pause');
 	}
 
 	$("#small-nav, #home-small").css("min-height", $(window).height()/2);

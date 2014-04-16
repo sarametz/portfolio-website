@@ -83,7 +83,7 @@ h5, p {
 
 
 #portfolio .project-cell {
-  background: #dededc;
+  background: #b7d9c0;/*#dededc;*/
   margin: 30px;
   overflow: hidden;
   position:relative;
@@ -137,7 +137,7 @@ h5, p {
 .project-img{
   max-width: 100%;
   max-height:100%;
-  border: 1px solid #eaeaea;
+  border: none;
 }
 
 #carousel-controls{
@@ -161,12 +161,18 @@ h5, p {
 
 .carousel-inner{
   padding:50px 0;
+  background: #b7d9c0;
+}
+
+.img-holder, .project-desc{
+  height: 400px;
 }
 
 #all-proj-btn{
   position: absolute;
   bottom: 100%;
   right: 10px;
+  margin-bottom: 10px;
 }
 
 #project-title{
@@ -389,3 +395,16 @@ h5, p {
   #links-col{
     padding-top: 20px;
   }
+
+#oldIE{
+  position: fixed;
+  top:0px;
+  left:0px;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  z-index: 900;
+  text-align: center;
+  background: #b7d9c0;
+  color: #000;
+}

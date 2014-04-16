@@ -14,7 +14,7 @@
   <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
   
   <!-- javascript -->
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="./jquery-1.10.2.min.js"></script>
   <script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
   <script src="./script.js"></script>
 
@@ -31,7 +31,9 @@
 </head>
 
 <body>
-  
+  <!--[if lt IE 9]>
+  <div id="oldIE">You are using an old version of internet explorer. Please update internet explorer to view this site.</div>
+  <![endif]-->
   <div id="wrap" class="row">
 
     <div id="static-nav" class="hidden-xs">
@@ -96,9 +98,10 @@
                   </div>
                 </div>
                 <div class="col-sm-4">
-                  <div class="project-cell">
-                    <img src="./images/placeholder.png" class="project-thumb"/>
-                    <div class="project-title"><h5>Coming Soon</h5></div>
+                  <div class="project-cell" slide-id="1">
+                      <!-- Image adapted from http://dribbble.com/shots/1104725-HTC-One-and-Galaxy-S4-PSD?list=searches&offset=4-->
+                    <img src="./images/HTCOne.png" class="project-thumb"/>
+                    <div class="project-title"><h5>Gravi-tris Android App</h5></div>
                   </div>
                 </div>
                 <div class="col-sm-4">
@@ -138,7 +141,7 @@
                 <div class="item active">
                     
                     <div class="col-sm-6 img-holder">
-                      <img src="./images/website.png" id="img-web" class="project-img"/>
+                      <img src="./images/website-shot.png" id="img-web" class="project-img"/>
                     </div>
                     <div class="col-sm-6 project-desc">
                       <h4>This Website</h4>
@@ -153,6 +156,34 @@
                       </ul>
                       <h5>Website:</h5>
                       <a href="http://smetz.co.nz/">http://smetz.co.nz/</a>
+                    </div>
+                    <div class="clearfix hidden-xs"></div>
+
+                </div>
+                <div class="item">
+                    
+                    <div class="col-sm-6 img-holder">
+                      <img src="./images/htcone-shot.png" id="img-web" class="project-img"/>
+                    </div>
+                    <div class="col-sm-6 project-desc">
+                      <h4>Gravi-tris Android App</h4>
+                      <p> 
+                          I developed an android app called Gravi-tris, to get started with android. I used both OpenGL ES and the inbuilt android canvas for rendering, so I could learn more about each technology. 
+                      </p>
+                      <p>
+                          The app is inspired by the classic game tetris and 2048.
+                      </p>
+                      <p>
+                          Gravi-tris is currently in alpha on Google Play. If you would like access <a href="#" class="scroll-link" data-id="about"><i>contact me</i></a>.
+                      </p>
+                      <h5>Technologies Used:</h5>
+                      <ul>
+                        <li>Android</li>
+                        <li>Java</li>
+                        <li>OpenGL ES</li>
+                      </ul>
+                      <h5>Link:</h5>
+                      <a href="#">This will go to play store soon</a>
                     </div>
                     <div class="clearfix hidden-xs"></div>
 
